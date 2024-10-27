@@ -1,0 +1,9 @@
+<h3>This voters page</h3>
+<hr>
+<h5>Person: {{ name }}</h5>
+<h6>Age:{{ age }}</h6>
+{% if age > 18 %}
+    <h6>Status : This guy can vote !</h6>
+{% else %}
+    <h6>Hey pilabacha come after 18 years</h6>
+{% endif %}

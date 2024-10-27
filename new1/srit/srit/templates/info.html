@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus info</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+                <td>Bus ID</td>
+                <td>Bus Route</td>
+        </thead>
+        <tbody>
+            {% if routes %}
+                {% for route in routes %}
+                    {% if route.id and route.area %}
+                    <tr>
+                        <td>{{ route.id }}</td>
+                        <td>{{ route.area }}</td>
+                    </tr>
+                    {% else %}
+                    <td colspan="2">bus cancelled</td>
+                    {% endif %}
+                    {% endfor %}
+            
+            {% else %}
+
+            <td colspan="2">No buses found</td>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>

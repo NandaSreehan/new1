@@ -1,0 +1,5 @@
+<h1>This page for Prabhas Fans</h1>
+<hr>
+{% fo movie in movies %}
+    <h3>{{ forloop.counter0 }}  {{ movie.name }} Released in {{ movie.year }} Directed By {{ movie.director }}</h3>
+{% endfor %}
